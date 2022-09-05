@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang=""en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
+    <title>Picture Share</title>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <nav>
+        <ol>
+            <li>
+                <a href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ url_for('post') }}">Post</a>
+            </li>
+            <li>
+                <a href="{{ url_for('profile') }}">Profile</a>
+            </li>
+            <li>
+                <a href="{{ url_for('search') }}">Search</a>
+            </li>
+            <li>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </li>
+        </ol>
+    </nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

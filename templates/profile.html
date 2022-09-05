@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Welcome to Picture Share</h1>
+<ol>
+    <li>{{ session["username"] }}</li>
+    <li>Followers</li>
+    <li>Following</li>
+</ol>
+
+<section>
+    {% if images %}
+        {% for image in images %}
+            <img src="{{ url_for('static', filename='assets/' + image['image_id'])}}"/>
+            <p><b>{{ session["username"] }} </b>{{ image["caption"] }}</p>
+        {% endfor %}
+    {% endif %}
+</section>
+
+
+{% endblock %}

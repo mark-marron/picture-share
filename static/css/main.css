@@ -1,0 +1,51 @@
+:root{
+    --page-background-color: #bacde88d;
+    --content-background-color: #ebebebd4;
+}
+
+html{
+    /* background-color: var(--page-background-color); */
+
+    
+    height: 100vh;
+}
+
+body{
+    background-color: var(--content-background-color);
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 0%;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 3vw;
+    padding: 5%;
+    text-align: center;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+nav ol{
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    padding: 0%;
+}
+
+nav li{
+    display: block;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    background-color: gray;
+}

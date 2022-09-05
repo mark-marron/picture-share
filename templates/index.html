@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<h1>Welcome to Picture Share</h1>
+
+{% if images %}
+    {% for image in images %}
+        <strong>{{ image["username"] }}</strong>
+        <img src="{{ url_for('static', filename='assets/' + image['image_id'])}}"/>
+        {% if image["caption"] %}
+            <p><b>{{ image["username"] }}</b>{{ image["caption"] }}</p>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% endblock %}
+

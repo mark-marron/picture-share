@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<form action="" method="POST">
+    <h1>Find a Friend</h1>
+    <h2>Search</h2>
+    {{ form.hidden_tag() }}
+
+    {{ form.username() }}
+    {% for error in form.username.errors %}
+        {{ error }}
+    {% endfor %}
+
+    {{ form.submit() }}
+
+    {% if users %}
+    {% for user in users %}
+        <section>
+            <a href="{{ url_for('user', user_id=user['user_id']) }}">{{ user['username'] }}</a>
+        </section>
+    {% endfor %}
+{% endif %}
+</form>
+
+
+{% endblock %}

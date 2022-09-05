@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="" method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    {{ form.image() }}
+    {% for error in form.image.errors %}
+        {{ error }}
+    {% endfor %}
+    {{ form.caption() }}
+
+    {{ form.submit() }}
+</form>
+
+{% endblock %}
